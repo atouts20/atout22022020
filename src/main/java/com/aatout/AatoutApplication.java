@@ -27,13 +27,13 @@ import com.aatout.property.FileStorageProperties;
 import com.aatout.service.AccountService;
 import com.aatout.web.StorageService;
 
-
+//extends SpringBootServletInitializer
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableConfigurationProperties({
 	FileStorageProperties.class
 })
-public class AatoutApplication extends SpringBootServletInitializer implements CommandLineRunner{
+public class AatoutApplication  implements CommandLineRunner{
 
 	@Resource
 	StorageService storageService;   
@@ -48,10 +48,10 @@ public class AatoutApplication extends SpringBootServletInitializer implements C
 	@Autowired
 	private OperationService operationService;
 	
-	@Override
+	/*@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(AatoutApplication.class);
-    }
+    }*/
 	
 	
 	public static void main(String[] args) {
